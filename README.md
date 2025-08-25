@@ -34,7 +34,18 @@
 最终所有雅思词汇的 GPT 风格解释会整合在 JSONL 文件中，便于后续查阅或导入其他学习工具。
 
 ### 5. 导入Anki
-直接导入Output文件夹中的 .tsv 或者 .apkg。
+直接导入NewIdea/Output文件夹中的 .tsv 或者 .apkg。
+
+<div style="background: linear-gradient(90deg,#ffeeba,#fff); border: 1px solid #ffd700; padding:8px; border-radius:8px; font-weight:bold;">
+直接导入 NewIdea/Output 文件夹中的 .tsv 或者 .apkg。
+</div>
+<div style="background: linear-gradient(90deg,#ffeeba,#fff); border: 1px solid #ffd700; padding:8px; border-radius:8px; font-weight:bold;">
+直接导入 NewIdea/Output 文件夹中的 .tsv 或者 .apkg。
+</div>
+<div style="background: linear-gradient(90deg,#ffeeba,#fff); border: 1px solid #ffd700; padding:8px; border-radius:8px; font-weight:bold;">
+直接导入 NewIdea/Output 文件夹中的 .tsv 或者 .apkg。
+</div>
+
 
 ## 主要依赖
 
