@@ -33,6 +33,9 @@
 
 最终所有雅思词汇的 GPT 风格解释会整合在 JSONL 文件中，便于后续查阅或导入其他学习工具。
 
+### 5. 导入Anki
+直接导入Output文件夹中的 .tsv 或者 .apkg。
+
 ## 主要依赖
 
 - Python 3.x
@@ -63,5 +66,5 @@ python batch_process.py  # 批量生成解释，输出 output_words.jsonl
 如需详细用法或遇到问题，请提交 Issue 或联系作者。
 
 ---
-
-如果你有具体的模块目录或需要补充说明，请告诉我，我可以进一步完善这个 README。
+### 总共花费30块 电脑跑了两天两夜才做完, 忘记写多线程是这样的 - -|||
+![alt text](image.png)
