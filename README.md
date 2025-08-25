@@ -46,6 +46,9 @@
 直接导入 NewIdea/Output 文件夹中的 .tsv 或者 .apkg。
 </div>
 
+#### 随机卡牌
+![alt text](c5a11beb5f279e45bce9d2d75316b68.png)
+
 
 ## 主要依赖
 
