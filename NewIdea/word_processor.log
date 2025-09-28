@@ -1,0 +1,44 @@
+2025-09-28 10:55:08,886 - INFO - HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-28 10:55:08,896 - INFO - Successfully processed word: hello
+2025-09-28 10:55:08,900 - INFO - 开始多线程处理 5 个单词，最大并发数: 1，延迟: 0.2秒
+2025-09-28 10:55:36,416 - INFO - HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-28 10:55:36,417 - INFO - Successfully processed word: hello
+2025-09-28 10:56:12,391 - INFO - HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-28 10:56:12,392 - INFO - Successfully processed word: world
+2025-09-28 10:56:56,548 - INFO - HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-28 10:56:56,549 - INFO - Successfully processed word: python
+2025-09-28 10:57:24,440 - INFO - HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-28 10:57:24,441 - INFO - Successfully processed word: artificial
+2025-09-28 10:57:52,495 - INFO - HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-28 10:57:52,497 - INFO - Successfully processed word: intelligence
+2025-09-28 10:57:52,699 - INFO - 多线程处理完成！成功: 5, 失败: 0, 总计: 5
+2025-09-28 10:57:52,700 - INFO - 总耗时: 163.80秒, 平均: 32.76秒/词
+2025-09-28 10:57:52,705 - INFO - 开始多线程处理 5 个单词，最大并发数: 3，延迟: 0.2秒
+2025-09-28 10:58:26,962 - INFO - HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-28 10:58:26,963 - INFO - Successfully processed word: hello
+2025-09-28 10:58:31,157 - INFO - HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-28 10:58:31,158 - INFO - Successfully processed word: world
+2025-09-28 10:58:44,049 - INFO - HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-28 10:58:44,050 - INFO - Successfully processed word: python
+2025-09-28 10:59:00,116 - INFO - HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-28 10:59:00,117 - INFO - Successfully processed word: intelligence
+2025-09-28 10:59:26,980 - INFO - Retrying request to /chat/completions in 0.450956 seconds
+2025-09-28 11:00:25,299 - INFO - HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-28 11:00:25,301 - INFO - Successfully processed word: artificial
+2025-09-28 11:00:25,505 - INFO - 多线程处理完成！成功: 5, 失败: 0, 总计: 5
+2025-09-28 11:00:25,506 - INFO - 总耗时: 152.80秒, 平均: 30.56秒/词
+2025-09-28 11:00:25,508 - INFO - 开始多线程处理 5 个单词，最大并发数: 5，延迟: 0.2秒
+2025-09-28 11:01:02,494 - INFO - HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-28 11:01:02,496 - INFO - Successfully processed word: world
+2025-09-28 11:01:04,018 - INFO - HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-28 11:01:04,019 - INFO - Successfully processed word: python
+2025-09-28 11:01:04,844 - INFO - HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-28 11:01:04,846 - INFO - Successfully processed word: artificial
+2025-09-28 11:01:25,524 - INFO - Retrying request to /chat/completions in 0.400990 seconds
+2025-09-28 11:01:25,788 - INFO - Retrying request to /chat/completions in 0.413904 seconds
+2025-09-28 11:02:03,775 - INFO - HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-28 11:02:03,776 - INFO - Successfully processed word: intelligence
+2025-09-28 11:02:06,815 - INFO - HTTP Request: POST https://api.moonshot.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-28 11:02:06,817 - INFO - Successfully processed word: hello
+2025-09-28 11:02:07,020 - INFO - 多线程处理完成！成功: 5, 失败: 0, 总计: 5
+2025-09-28 11:02:07,021 - INFO - 总耗时: 101.51秒, 平均: 20.30秒/词

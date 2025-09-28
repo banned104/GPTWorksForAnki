@@ -1,7 +1,7 @@
 import csv
 import json
 import time
-from kimiv2 import explain_word  # 导入模块化的函数
+from kimiv2_SingleThread import explain_word  # 导入模块化的函数
 
 class TimeoutException(Exception):
     print("链接超时")

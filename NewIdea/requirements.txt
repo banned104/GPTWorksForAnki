@@ -1,0 +1,3 @@
+# KIMI API多线程单词解析器依赖包
+openai>=1.0.0
+requests>=2.31.0
