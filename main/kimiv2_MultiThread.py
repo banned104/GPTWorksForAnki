@@ -62,6 +62,9 @@ SYSTEM_PROMPT = """你是一名中英文双语教育专家，拥有帮助将中�
 - 用英文撰写一个有画面感的场景故事，包含用户提供的单词。
 - 要求使用简单的词汇，100 个单词以内。
 - 英文故事后面附带对应的中文翻译。
+
+### 额外要求:
+- 输出的JSON
 """
 
 # 文件写入锁
@@ -165,10 +168,10 @@ def batch_process_multithread(words, output_file, max_workers=None, delay=None):
                 
                 if "error" in result:
                     error_count += 1
-                    print(f"  ✗ Failed [{word_index_pair[0]}]: {word_index_pair[1]} -> {result['error']}")
+                    print(f"   Failed [{word_index_pair[0]}]: {word_index_pair[1]} -> {result['error']}")
                 else:
                     success_count += 1
-                    print(f"  ✓ Completed [{word_index_pair[0]}]: {word_index_pair[1]} ({success_count + error_count}/{len(word_index_pairs)})")
+                    print(f"  Completed [{word_index_pair[0]}]: {word_index_pair[1]} ({success_count + error_count}/{len(word_index_pairs)})")
                 
                 # 添加延迟以控制请求频率
                 if delay > 0:
@@ -187,7 +190,7 @@ def batch_process_multithread(words, output_file, max_workers=None, delay=None):
     logger.info(f"多线程处理完成！成功: {success_count}, 失败: {error_count}, 总计: {len(word_index_pairs)}")
     logger.info(f"总耗时: {total_time:.2f}秒, 平均: {total_time/len(word_index_pairs):.2f}秒/词")
     
-    print(f"✅ 多线程处理完成！")
+    print(f"   多线程处理完成！")
     print(f"   成功处理: {success_count} 个单词")
     print(f"   处理失败: {error_count} 个单词") 
     print(f"   总耗时: {total_time:.2f} 秒")
@@ -195,8 +198,8 @@ def batch_process_multithread(words, output_file, max_workers=None, delay=None):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("❌ 用法: python kimiv2_MultiThread.py <word1> [word2] [word3] ...")
-        print("❌ 或者: python kimiv2_MultiThread.py --batch <csv_file> [max_workers]")
+        print(" 用法: python kimiv2_MultiThread.py <word1> [word2] [word3] ...")
+        print(" 或者: python kimiv2_MultiThread.py --batch <csv_file> [max_workers]")
         sys.exit(1)
 
     if sys.argv[1] == "--batch" and len(sys.argv) >= 3:
@@ -213,7 +216,7 @@ if __name__ == "__main__":
                 reader = csv.reader(f)
                 words = [row[0] for row in reader if row and row[0].strip()]
         except FileNotFoundError:
-            print(f"❌ 文件未找到: {csv_file}")
+            print(f"文件未找到: {csv_file}")
             sys.exit(1)
         
         output_file = "output_words.jsonl"

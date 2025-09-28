@@ -15,7 +15,7 @@ def batch_process(csv_in, jsonl_out, max_workers=5, delay=0.5):
         delay: 请求间隔延迟（秒）
     """
     if not os.path.exists(csv_in):
-        print(f"❌ 输入文件不存在: {csv_in}")
+        print(f"输入文件不存在: {csv_in}")
         return
     
     # 读取CSV文件中的单词
@@ -24,16 +24,25 @@ def batch_process(csv_in, jsonl_out, max_workers=5, delay=0.5):
         with open(csv_in, encoding="utf-8") as fin:
             reader = csv.reader(fin)
             words = [row[0] for row in reader if row and row[0].strip()]
+    except UnicodeDecodeError:
+        print(f"使用 UTF-8 编码读取 {csv_in} 失败，尝试使用 GBK 编码...")
+        try:
+            with open(csv_in, encoding="gbk") as fin:
+                reader = csv.reader(fin)
+                words = [row[0] for row in reader if row and row[0].strip()]
+        except Exception as e:
+            print(f"使用 GBK 编码读取 {csv_in} 失败: {e}")
+            return
     except Exception as e:
-        print(f"❌ 读取CSV文件失败: {e}")
+        print(f"读取CSV文件失败: {e}")
         return
     
     if not words:
-        print("❌ CSV文件中没有找到有效的单词")
+        print("CSV文件中没有找到有效的单词")
         return
     
-    print(f"📚 从 {csv_in} 读取到 {len(words)} 个单词")
-    print(f"🚀 开始多线程处理，最大并发数: {max_workers}，延迟: {delay}秒")
+    print(f"从 {csv_in} 读取到 {len(words)} 个单词")
+    print(f"开始多线程处理，最大并发数: {max_workers}，延迟: {delay}秒")
     
     # 清空输出文件（如果存在）
     if os.path.exists(jsonl_out):
@@ -42,7 +51,7 @@ def batch_process(csv_in, jsonl_out, max_workers=5, delay=0.5):
     # 使用多线程批量处理
     batch_process_multithread(words, jsonl_out, max_workers, delay)
     
-    print(f"✅ 处理完成！结果已保存到 {jsonl_out}")
+    print(f"处理完成！结果已保存到 {jsonl_out}")
 
 # if __name__ == "__main__":
 #     parser = argparse.ArgumentParser()
@@ -65,7 +74,7 @@ if __name__ == "__main__":
     
     args = parser.parse_args()
     
-    print(f"🔧 配置参数:")
+    print(f"配置参数:")
     print(f"   输入文件: {args.csv}")
     print(f"   输出文件: {args.output}")
     print(f"   最大并发数: {args.workers}")
