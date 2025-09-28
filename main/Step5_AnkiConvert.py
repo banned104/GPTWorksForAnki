@@ -54,5 +54,6 @@ def json_to_tsv(input_file: str, output_file: str):
 
 
 if __name__ == "__main__":
-    json_to_tsv("Output/final_output.jsonl", "Output/anki_words.tsv")
+    # json_to_tsv("Output/final_output.jsonl", "Output/anki_words.tsv")
+    json_to_tsv("TOEIC/TOEIC_output_words_processed.jsonl", "TOEIC/TOEIC_anki_words.tsv")
     
