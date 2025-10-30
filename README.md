@@ -1,5 +1,5 @@
 # 雅思单词 GPT Dictionary 
-
+“救赎之道，就在其中。”
 > ⚠️ **Output 文件夹说明**  
 > **`main/Output/` 和 `output/` 文件夹包含所有最终输出内容：**
 > - `IELTS_anki_words.tsv` - Anki导入用TSV文件
