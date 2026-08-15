@@ -1,3 +1,5 @@
+
+
 # 雅思单词 GPT Dictionary 
 “救赎之道，就在其中。”
 > ⚠️ **Output 文件夹说明**  
@@ -46,7 +48,7 @@ python 2_batch_process_MultiThread.py --csv unmatched.csv --output output_words.
 参数说明：
 - `--csv`：输入CSV文件路径
 - `--output`：输出JSONL文件路径
-- `--workers`：最大并发线程数（建议1-10，根据API限制调整）
+- `--workers`：最大并发线程数（建议1-45，根据API限制调整）
 - `--delay`：每个请求间隔秒数（防止触发API限流）
 
 **单线程处理（兼容旧版）**
